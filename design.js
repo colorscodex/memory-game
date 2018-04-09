@@ -1,7 +1,7 @@
 /* test area: myCard.
 ===================== */
 
-const myCard = document.getElementById("card1");
+const myCard = document.getElementById("card-back");
 
 function myFunctionTest () {
 
