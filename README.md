@@ -1,3 +1,4 @@
 # Memory game
-How to rotate a card
+First step: 
+Rotate the cards.
 [this](https://colorscodex.github.io/memory-game/)
