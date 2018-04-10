@@ -6,31 +6,131 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
         <link rel="stylesheet" href="style.css">
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
     </head>
     
     <body>
-        <section class="container">
-            <h2>Rotate a card</h2>
-            <ul>Transform, this property allows you to rotate, scale, move, skew, etc., elements.
+        <div class="container">
+            <h2>Memory game</h2>
+            
+            <p>Methods used:</p>
+            <p>Transform property: it allows us to rotate, scale, move, skew, etc., elements.</p>
+            <ul>
                 <li>Value: rotateY(angle) method: rotates an element around its Y-axis at a given degree.</li>
                 <li>Value: perspective-3d defines a perspective view for a 3D transformed element, this property must be used together with the transform property.</li>
                 <li>With transition property, we define the velocity of the transform.</li>
             </ul>
             
-            <h2>HTML DOM addEventListener() Method</h2>
-            
+            <p>jQuery attributes:</p>
+            <ul>
+				<li>for openig and closing the cards:<em> .toggleClass(className) Method.</em></li>
+			</ul>
             <hr>
             
-            <button type="button" id="turn-back">turn back the test-card</button>
+            <button type="button" id="turn-back">reset the game</button>
             
             <p>Card test</p>
             
-            <div class="card back" id="card-back">
-                <div class="card front" id="card-front">
-                    <p>Hello!</p>
-                </div>
-            </div>
-        </section>
+            <section class="deck">
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>Hello</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>wordl!</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>I con</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>do it!</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>Hello</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>wordl!</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>I can</p>
+					</div>
+				</div>
+		        
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>do it!</p>
+					</div>
+				</div>
+				
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>The memory</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>game!</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>It is starting</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>to work!</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>The memory</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>game!</p>
+					</div>
+				</div>
+				
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>It is starting</p>
+					</div>
+				</div>
+                
+                <div class="card back" id="card-back">
+					<div class="card front" id="card-front">
+						<p>to work!</p>
+					</div>
+				</div>
+			</section>            
+        </div>
         <script src="design.js"></script>
     </body>
 </html>
