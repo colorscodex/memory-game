@@ -1,3 +1,3 @@
 # Memory game
 How to rotate a card
-[this](https://colorscodex.github.io/rotate/)
+[this](https://colorscodex.github.io/memory-game/)
