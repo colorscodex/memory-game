@@ -22,7 +22,7 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 50px auto;
-  padding-left: 20px;
+  padding: 0 20px;
   justify-content: center;
   align-items: center;	
 }
@@ -94,7 +94,7 @@ body {
   .deck {
     width: 360px;
     min-height: 360px;
-    padding-left: 0;
+    padding: 0;
   }
   
   .card {
