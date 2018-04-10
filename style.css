@@ -50,6 +50,15 @@ body {
   position: relative;
 }
 
+/* for the text 
+  ============= */
+.card p {
+  text-align: center;
+}
+
+/* for the front and back of the card
+   ================================== */
+
 .back {
   background-color: #696969;
   color: #696969;
@@ -80,7 +89,6 @@ body {
 
 /* For small devices.
 ===================== */
-
 @media screen and (max-width: 700px){
   
   .deck {
@@ -90,8 +98,8 @@ body {
   }
   
   .card {
-    width: 68px;
-    height: 68px;
+    width: 70px;
+    height: 70px;
   }
 }
 
