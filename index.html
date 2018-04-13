@@ -8,127 +8,162 @@
 		<meta name="author" content="Susana deOliveira">
 		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
+
 		<link rel="stylesheet" href="style.css">
 		<link href="myLogo.ico" rel="icon" type="image/x-icon">
 		
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<h2>Memory game</h2>
-			<p>Methods used:</p>
-			
+		<nav id="navbar"><p>☰ Methods used:</p></nav>
+		<div id="panel">
+			<h2>To create movement</h2>
+
 			<p>Transform property: it allows us to rotate, scale, move, skew, etc., elements.</p>
 			<ul>
-				<li>Value: rotateY(angle) method: rotates an element around its Y-axis at a given degree.</li>
-				<li>Value: perspective-3d defines a perspective view for a 3D transformed element, this property must be used together with the transform property.</li>
-				<li>With transition property, we define the velocity of the transform.</li>
+				<li>transform: rotateY(angle), for defining a 3D rotation along the Y-axis.</li>
 			</ul>
-			
+
+			<p>Transform-style property: It specifies how nested elements are rendered in 3D space, it must be used together with the transform property.</p>
+			<ul>
+				<li>transform-style: preserve-3d, for defining a perspective view for a 3D transformed element.</li>
+			</ul>
+
+			<p>Transition</p>
+			<ul>				
+				<li>transition property: transform, for adding a transformation to the transition effect.</li>
+				<li>transition-duration: 2s, for defining the velocity of the transform (2s).</li>
+			</ul>
+
+			<p>Backface-visibility property</p>
+			<ul>
+				<li>backface-visibility: hidden, the backside is not visible.</li>
+			</ul>
+
 			<p>jQuery attributes:</p>
 			<ul>
 				<li>for openig and closing the cards:<em> .toggleClass(className) Method.</em></li>
 			</ul>
-			
 			<hr>
-			<button type="button" id="turn-back">reset the game</button>
+			<p class="note">Bibliography reference: <a href="https://www.w3schools.com/" target="_blank">[w3schools.com]</a></p>
+			<hr>
+		</div>
+		<div class="container">
+			<h1>Memory game</h1>			
+			<hr>
+			<div class="control-game">  	  			
+   				<div id="basicUsage">00:00:00</div>   				
+   				<button type="reset" id="turn-back">reset the game</button>
+   			</div>
 			
+			<!-- Add different phrases to each p tag through javaScript -->			
 			<section class="deck">
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>Hello</p>
+						<p id="one"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>wordl!</p>
+						<p id="two"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>I can</p>
+						<p id="three"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>do it!</p>
+						<p id="four"></p>
 					</div>
 				</div>
 					<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>Hello</p>
+						<p id="five"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>wordl!</p>
+						<p id="six"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>I can</p>
+						<p id="seven"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>do it!</p>
+						<p id="eight"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>The memory</p>
+						<p id="nine"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>game!</p>
+						<p id="ten"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>It is starting</p>
+						<p id="eleven"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>to work!</p>
+						<p id="twelve"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>The memory</p>
+						<p id="thirteen"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>game!</p>
+						<p id="fourteen"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>It is starting</p>
+						<p id="fifteen"></p>
 					</div>
 				</div>
 				
 				<div class="card back" id="card-back">
 					<div class="card front" id="card-front">
-						<p>to work!</p>
+						<p id="sixteen"></p>
 					</div>
 				</div>
 			</section>
+			<!-- Footer with the signature. -->
+
+			<footer>
+				<p>Braga, 12 April 2018.</p>
+				<div class="colors-page">
+	        			<div class="steel-blue"></div>
+	        			<div class="moccasin"></div>
+	        			<div class="dim-gray"></div>
+				</div>	
+			</footer>			
 		</div>
 		<script src="design.js"></script>
 	</body>
