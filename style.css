@@ -11,97 +11,298 @@ html {
 html,
 body {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Coda', cursive;
-  background-color: #fffff0;
-  color: #696969;
-	
+  font-family: 'Coda', cursive;	
 }
 
+body {
+	z-index: -1;
+	background: #fffff0 linear-gradient(to top left, #fffff0 , #ffe4b5 );
+}
+
+/*  In common:
+    -webkit- it is an alternative for Safari. 
+	  ========================================= */
+
+.container,
+.card {
+	justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.container,
+.control-game,
+.deck,
+.card,
+footer,
+.colors-page {
+	display: flex;
+	display: -webkit-flex;	
+}
+
+/*  A navbar with a panel to describe some methods used.
+    ==================================================== */
+
+#navbar {
+	width: 100%;
+	height: 62px;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 20;
+	text-align: center;		
+	color: #fffff0;
+	background-color: #696969;
+	box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);
+	cursor: default;
+}
+
+#panel {
+	width: 100%;
+	text-align: left;
+	font:300 20px 'Open Sans', sans-serif;
+	color: #fffff0;
+	background-color: #696969;
+	display: none;
+	top:0;
+	left: 0;
+	right: 0;
+	margin-top: 62px;
+	position: fixed;
+	z-index: 10;
+	box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+
+#panel p{
+	margin-left: 20px;
+	text-decoration: underline;
+}
+
+h2 {
+	font:300 30px 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+#panel .note {
+	font-size: 16px;
+	text-decoration: none;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	color:  #fffff0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff7f50;
+}
+
+#panel hr:last-of-type {
+	margin-bottom: 0;
+	border: 1px solid #696969;
+
+}
+
+/*	
+*	Container:  Title,
+*             Deck of cards and
+*	            Footer with signature. 
+*/
+
 .container {
-  width: 100%;
-  max-width: 800px;
-  margin: 50px auto;
+  width: 100%;  
+  margin: 62px auto 10px auto;
   padding: 0 20px;
-  justify-content: center;
-  align-items: center;	
+  align-items: center;
+	-webkit-align-items: center;
+	text-align: center;
+	flex-direction: column;	
+	background: #fffff0 linear-gradient(to top left, #fffff0 , #ffe4b5 );
+	z-index: -1;
+}
+
+/*  Style for title
+    ================ */
+
+h1 {
+	font:300 52px 'Open Sans', sans-serif;
+}
+
+#basicUsage {
+	margin-right: 10px;
 }
 		
+/*	Styles for the deck of cards.
+	============================= */
+
 .deck {
   width: 660px;
   min-height: 660px;
-  margin: 0 auto;
+  margin: 3em 0;
   padding: 32px;
-  display: flex;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  background: #ffe4b5 linear-gradient(to bottom right, #fffff0, #ffe4b5 );
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
 }
+
+/*  Style for the cards.
+    ==================== */
 
 .card {
-  height: 125px;
   width: 125px;
-  border-radius: 8px;
-  cursor: default;
-  display: flex;
-  justify-content: center;
+	height: 125px;
+	text-align: center;
   align-items: center;
+  -webkit-align-items: center;
+  border-radius: 8px;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   position: relative;
+  cursor: default;
 }
 
-/* for the text 
-  ============= */
-.card p {
-  text-align: center;
+.card-back {
+	color: #696969;
+	background-color: #4682b4;
+	transform: rotateY(0);
+	-webkit-transform: rotateY(0);
 }
 
-/* for the front and back of the card
-   ================================== */
-
-.back {
-  background-color: #696969;
-  color: #696969;
-  backface-visibility: hidden;
-  transform: rotateY(0);
-  -webkit-transform: rotateY(0); /* Safari */
+.card-front {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg); 
 }
 
-.front {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); /* Safari */
-}
-
-#card-back,
-#card-front {
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d; /* Safari */
-  transition: transform 2s;
+.card-back, 
+.card-front{
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: transform 2s;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d; 
+	-webkit-transition: -webkit-transform 2s;
 }	
 
-/* A class for using with .toggleClass method.
-  ============================================ */
+/*	A class for using with .toggleClass method.
+	==============================================	*/
 
-.open {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); /* Safari */
+.rotate-card {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg); 
 }
 
-/* For small devices.
-===================== */
+/*  Footer
+    ====== */
+
+footer {
+	justify-content: flex-end; 
+	-webkit-justify-content: flex-end;
+    color: #696969; 	
+}
+
+footer p {
+	margin-right: 5px;	
+}
+
+/*  Colors used in the page.
+    Backgroud-color for the page is Ivory #fffff0;
+    ============================================== */
+
+.colors-page {
+  padding: 18px 0;
+}
+
+.moccasin,
+.dim-gray,
+.steel-blue {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  box-shadow: 0px 2px 5px #c0c0c0;
+  margin: 0 5px;
+}
+
+.moccasin {
+  background-color: #ffe4b5;
+}
+
+.dim-gray {
+  background-color: #696969;
+}
+
+.steel-blue {
+  background-color: #4682b4;
+}
+
+/*  @Description: For small devices, media queries.
+    =============================================== */
+
 @media screen and (max-width: 700px){
-  
-  .deck {
-    width: 360px;
-    min-height: 360px;
-    padding: 0;
-  }
-  
-  .card {
-    width: 70px;
-    height: 70px;
-  }
+
+	.deck {
+		width: 360px;
+		min-height: 380px;
+		padding: 16px;
+	}
+
+	.card {
+		width: 70px;
+		height: 70px;
+	}
+
+	#panel,
+	.card,
+	footer {
+		font-size: 14px;
+	}
+	
+	h2 {
+		font-size: 20px;
+		padding-top: 10px;
+	}
+
+	#panel .note {
+		font-size: 12px;
+	}
+
+	h1 {
+		font-size: 28px;
+	}
+
+	footer  {
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+	}
+
+	.colors-page {
+    padding: 14px 0;
+	}
+
+	.moccasin,
+	.dim-gray,
+	.steel-blue {
+    width: 20px;
+    height: 20px;
+    
+	}
+
+  /*  For snall devices, change the position: 
+      fixed to relative */
+
+	#panel {
+    position: relative;
+	}
+	
 }
+
 
