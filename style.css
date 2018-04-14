@@ -53,7 +53,8 @@ footer,
 	right: 0;
 	position: fixed;
 	z-index: 20;
-	text-align: center;		
+	text-align: center;
+	font:300 20px 'Open Sans', sans-serif;	
 	color: #fffff0;
 	background-color: #696969;
 	box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);
@@ -63,7 +64,7 @@ footer,
 #panel {
 	width: 100%;
 	text-align: left;
-	font:300 20px 'Open Sans', sans-serif;
+	font:300 18px 'Open Sans', sans-serif;
 	color: #fffff0;
 	background-color: #696969;
 	display: none;
@@ -78,9 +79,8 @@ footer,
 	-webkit-justify-content: space-between;
 }
 
-#panel p{
+#panel p {
 	margin-left: 20px;
-	text-decoration: underline;
 }
 
 h2 {
@@ -90,7 +90,6 @@ h2 {
 
 #panel .note {
 	font-size: 16px;
-	text-decoration: none;
 }
 
 a {
@@ -110,17 +109,19 @@ a:hover {
 
 }
 
-/*	
-*	Container:  Title,
-*				Deck of cards and
-*				Footer with signature. 
+/*
+
+Container:	Title,
+		Deck of cards and
+		Footer with signature. 
 */
 
 .container {
-  width: 100%;  
-  margin: 62px auto 10px auto;
-  padding: 0 20px;
-  align-items: center;
+	width: 100%;
+	height: 100%;
+	margin: 62px auto 10px auto;
+	padding: 0 20px;
+	align-items: center;
 	-webkit-align-items: center;
 	text-align: center;
 	flex-direction: column;	
@@ -128,8 +129,8 @@ a:hover {
 	z-index: -1;
 }
 
-/*  Style for title
-    ================ */
+/*	Style for title
+	================ */
 
 h1 {
 	font:300 38px 'Open Sans', sans-serif;
@@ -185,7 +186,7 @@ h1 {
 }
 
 .card-back, 
-.card-front{
+.card-front {
 	backface-visibility: hidden;
 	transform-style: preserve-3d;
 	transition: transform 2s;
@@ -202,8 +203,8 @@ h1 {
 	-webkit-transform: rotateY(180deg); 
 }
 
-/*  Footer
-    ====== */
+/*	Footer
+	====== */
 
 footer {
 	justify-content: flex-end; 
@@ -215,9 +216,9 @@ footer p {
 	margin-right: 5px;	
 }
 
-/*  Colors used in the page.
-    Backgroud-color for the page is Ivory #fffff0;
-    ============================================== */
+/*	Colors used in the page.
+	Backgroud-color for the page is Ivory #fffff0;
+	============================================== */
 
 .colors-page {
 	padding: 18px 0;
@@ -245,8 +246,8 @@ footer p {
 	background-color: #4682b4;
 }
 
-/*  @Description: For small devices, media queries.
-    =============================================== */
+/*	@Description: For small devices, media queries.
+	=============================================== */
 
 @media screen and (max-width: 700px){
 
@@ -267,9 +268,17 @@ footer p {
 		font-size: 14px;
 	}
 	
+	#panel p {
+		margin: 0 0 0 20px;
+	}
+	
+	#panel ul {
+		margin: 7px 0;
+	}
+
 	h2 {
 		font-size: 20px;
-		padding-top: 10px;
+		margin: 8.3px 0 8.3px 0;
 	}
 
 	#panel .note {
@@ -286,7 +295,7 @@ footer p {
 	}
 
 	.colors-page {
-    padding: 14px 0;
+		padding: 14px 0;
 	}
 
 	.moccasin,
@@ -295,13 +304,6 @@ footer p {
 		width: 20px;
 		height: 20px;    
 	}
-
-	/*	For snall devices, change the position: 
-		fixed to relative. */
-
-	#panel {
-		position: relative;
-	}	
 }
 
 
