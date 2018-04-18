@@ -166,7 +166,7 @@ Container:	Title,
 	-webkit-align-items: center;
 	text-align: center;
 	flex-direction: column;	
-	background: #fffff0 linear-gradient(to top left, #fffff0 , #ffe4b5 );
+	background: #fffff0;
 	z-index: -1;
 }
 
