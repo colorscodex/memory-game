@@ -182,7 +182,7 @@ h1 {
 
 .deck {
 	width: 525px;
-	min-height: 515px;
+	min-height: 540px;
 	margin: 1.5em 0 3em 0;
 	padding: 25px;
 	flex-wrap: wrap;
@@ -323,7 +323,7 @@ footer p {
 
 	.deck {
 		width: 360px;
-		min-height: 350px;
+		min-height: 375px;
 		padding: 16px;
 		margin-bottom: 27px;
 	}
