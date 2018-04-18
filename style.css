@@ -19,7 +19,7 @@ body {
 
 body {
 	z-index: -1;
-	background: #fffff0 linear-gradient(to top left, #fffff0 , #ffe4b5 );
+	background: #fffff0;
 }
 
 /*	In common:
@@ -32,6 +32,7 @@ body {
 	-webkit-justify-content: center;
 }
 
+.methods,
 .container,
 .control-game,
 .deck,
@@ -47,7 +48,7 @@ footer,
 
 #navbar {
 	width: 100%;
-	height: 62px;
+	height: 68px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -71,7 +72,7 @@ footer,
 	top:0;
 	left: 0;
 	right: 0;
-	margin-top: 62px;
+	margin-top: 68px;
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);
@@ -79,18 +80,43 @@ footer,
 	-webkit-justify-content: space-between;
 }
 
+/*
+	Style for the text. */
+
 #panel p {
-	margin-left: 20px;
+	margin: 18px 0 0 20px;
 }
 
-h2 {
-	font:300 30px 'Open Sans', sans-serif;
-	text-align: center;
+#panel ul {
+	margin: 0;
+}
+
+#panel ul:last-of-type {
+	margin-bottom: 14px;
 }
 
 #panel .note {
 	font-size: 16px;
+	margin-bottom: 18px;
 }
+
+/*
+	Boxes for each type of actions: CSS3 and jQuery.
+	================================================ */
+
+.css-properties,
+.jQuery-action {
+	width: 50%;
+	padding-right: 10px;
+}
+
+.jQuery-action {
+	background-color: #fffff0;
+	color: #696969;
+}
+
+/*
+	Link for Bibliography references. */
 
 a {
 	outline: none;
@@ -103,10 +129,27 @@ a:hover {
 	color: #ff7f50;
 }
 
+/*	Style for Bibliography reference  */
+
+#panel hr:first-of-type {
+	margin-top: 0;
+
+}
+
 #panel hr:last-of-type {
 	margin-bottom: 0;
 	border: 1px solid #696969;
+}
 
+/*
+	Style for the square dot. */
+
+#panel span {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: #fffff0;
+	margin: 0 5px;
 }
 
 /*
@@ -118,8 +161,7 @@ Container:	Title,
 
 .container {
 	width: 100%;
-	margin: 62px auto 10px auto;
-	padding: 0 20px;
+	margin: 68px auto 10px auto;
 	align-items: center;
 	-webkit-align-items: center;
 	text-align: center;
@@ -132,38 +174,36 @@ Container:	Title,
 	================ */
 
 h1 {
-	font:300 38px 'Open Sans', sans-serif;
-}
-
-#basicUsage {
-	margin-right: 10px;
+	font:300 33px 'Open Sans', sans-serif;
 }
 		
 /*	Styles for the deck of cards.
 	============================= */
 
 .deck {
-	width: 607.2px;
-	min-height: 607.2px;
-	margin: 1em 0 3em 0;
-	padding: 29.4px;
+	width: 525px;
+	min-height: 515px;
+	margin: 1.5em 0 3em 0;
+	padding: 25x;
 	flex-wrap: wrap;
 	-webkit-justify-content: space-between;
 	-webkit-align-items: center;
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 10px;
-	background: #ffe4b5 linear-gradient(to bottom right, #fffff0, #ffe4b5 );
+	background: #4b0082 linear-gradient(to bottom right, #4b0082, #e6e6fa );
 	box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
-/*  Style for the cards.
-    ==================== */
+/* 	Style for the cards.
+	==================== */
 
 .card {
-	width: 115px;
-	height: 115px;
+	width: 100px;
+	height: 100px;
 	text-align: center;
+	text-shadow: 1px 0.5px #4b0082;
+	letter-spacing: 2px;
 	align-items: center;
 	-webkit-align-items: center;
 	border-radius: 8px;
@@ -173,8 +213,8 @@ h1 {
 }
 
 .card-back {
-	color: #696969;
-	background-color: #4682b4;
+	color: #ff1493;
+	background-color: #ff1493;
 	transform: rotateY(0);
 	-webkit-transform: rotateY(0);
 }
@@ -194,7 +234,7 @@ h1 {
 	-webkit-transition: -webkit-transform 2s;
 }	
 
-/*	A class for using with .toggleClass method.
+/*	A class for using with .addClass() method.
 	==============================================	*/
 
 .rotate-card {
@@ -223,9 +263,10 @@ footer p {
 	padding: 18px 0;
 }
 
-.moccasin,
-.dim-gray,
-.steel-blue {
+.indigo,
+.lavender,
+.deep-pink,
+.dim-gray {
 	width: 26px;
 	height: 26px;
 	vertical-align: middle;
@@ -233,27 +274,58 @@ footer p {
 	margin: 0 5px;
 }
 
-.moccasin {
-	background-color: #ffe4b5;
+.indigo {
+	background-color: #4b0082;
+}
+
+.lavender {
+	background-color: #e6e6fa;
+}
+
+.deep-pink {
+	background-color: #ff1493;
 }
 
 .dim-gray {
 	background-color: #696969;
 }
 
-.steel-blue {
-	background-color: #4682b4;
-}
-
 /*	@Description: For small devices, media queries.
 	=============================================== */
 
 @media screen and (max-width: 700px){
+	
+	/* For the slideToggle */
+	
+	#panel {
+		position: relative;
+	}
+
+	.methods {
+		display: block;
+	}
+
+	/*
+	Boxes for each type of actions: CSS3 and jQuery.
+	================================================ */
+
+	.css-properties,
+	.jQuery-action {
+		width: 100%;
+		padding: 9px 9px 9px 0;
+	}
+
+	.css-properties,
+	.jQuery-action p:first-of-type {
+		padding-top: 9px;
+	}
+
 
 	.deck {
 		width: 360px;
-		min-height: 380px;
-		padding: 16px;
+		min-height: 350px;
+		padding: 10px;
+		margin-bottom: 27px;
 	}
 
 	.card {
@@ -268,20 +340,17 @@ footer p {
 	}
 	
 	#panel p {
-		margin: 0 0 0 20px;
+		margin: 9px 0 0 20px;
 	}
 	
-	#panel ul {
-		margin: 7px 0;
-	}
-
-	h2 {
-		font-size: 20px;
-		margin: 8.3px 0 8.3px 0;
+	#panel ul:last-of-type {
+		margin-bottom: 7px;
 	}
 
 	#panel .note {
 		font-size: 12px;
+		margin: 11px 0 13px 15px;
+		padding: 5px;
 	}
 
 	h1 {
@@ -297,9 +366,10 @@ footer p {
 		padding: 14px 0;
 	}
 
-	.moccasin,
-	.dim-gray,
-	.steel-blue {
+	.indigo,
+	.deep-pink,
+	.lavender,
+	.dim-gray {
 		width: 20px;
 		height: 20px;    
 	}
