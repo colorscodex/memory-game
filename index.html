@@ -13,51 +13,60 @@
 		<link rel="stylesheet" href="style.css">
 		<link href="myLogo.ico" rel="icon" type="image/x-icon">
 		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	<body>
 		<nav id="navbar"><p>☰ Methods used:</p></nav>
 		<div id="panel">
-			<h2>To create movement</h2>
+			<div class="methods">
+				<div class="css-properties">
+					<p>Transform property: it allows us to rotate, scale, move, skew, etc., elements.</p>
+					<ul>
+						<li>transform: rotateY(angle), for defining a 3D rotation along the Y-axis.</li>
+					</ul>
 
-			<p>Transform property: it allows us to rotate, scale, move, skew, etc., elements.</p>
-			<ul>
-				<li>transform: rotateY(angle), for defining a 3D rotation along the Y-axis.</li>
-			</ul>
+					<p>Transform-style property: It specifies how nested elements are rendered in 3D space, it must be used together with the transform property.</p>
+					<ul>
+						<li>transform-style: preserve-3d, for defining a perspective view for a 3D transformed element.</li>
+					</ul>
 
-			<p>Transform-style property: It specifies how nested elements are rendered in 3D space, it must be used together with the transform property.</p>
-			<ul>
-				<li>transform-style: preserve-3d, for defining a perspective view for a 3D transformed element.</li>
-			</ul>
+					<p>Transition</p>
+					<ul>				
+						<li>transition property: transform, for adding a transformation to the transition effect.</li>
+						<li>transition-duration: 2s, for defining the velocity of the transform (2s).</li>
+					</ul>
 
-			<p>Transition</p>
-			<ul>				
-				<li>transition property: transform, for adding a transformation to the transition effect.</li>
-				<li>transition-duration: 2s, for defining the velocity of the transform (2s).</li>
-			</ul>
-
-			<p>Backface-visibility property</p>
-			<ul>
-				<li>backface-visibility: hidden, the backside is not visible.</li>
-			</ul>
-
-			<p>jQuery attributes:</p>
-			<ul>
-				<li>for openig and closing the cards:<em> .toggleClass(className) Method.</em></li>
-			</ul>
+					<p>Backface-visibility property</p>
+					<ul>
+						<li>backface-visibility: hidden, the backside is not visible.</li>
+					</ul>
+				</div>
+				<div class="jQuery-action">
+					<p>jQuery actions:</p>
+					
+					<p>For openig and closing the cards:</p>
+					<ul>
+						<li>addClass() / removeClass() Methods.</li>
+					</ul>
+				</div>
+			</div>
 			<hr>
-			<p class="note">Bibliography reference: <a href="https://www.w3schools.com/" target="_blank">[w3schools.com]</a></p>
+			<p class="note">Bibliography reference:
+				<span></span><a href="https://www.w3schools.com/" target="_blank">[w3schools.com]</a>
+				<span></span><a href="https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001" target="_blank">[Nanodegree Program: Front-End Web Developer]</a></p>
 			<hr>
 		</div>
+		
 		<div class="container">
 			<h1>Memory game</h1>			
 			<div class="control-game">  	  			
    				<div id="basicUsage">00:00:00</div>   				
    				<button type="reset" id="turn-back">reset the game</button>
-   			</div>
+			</div>
 			
 			<!-- Add different phrases to each p tag through javaScript -->			
-			<section class="deck">
+			<div class="deck">
 				<div class="card card-back">
 					<div class="card card-front">
 						<p id="one"></p>
@@ -152,15 +161,17 @@
 						<p id="sixteen"></p>
 					</div>
 				</div>
-			</section>
+			</div>
+			
 			<!-- Footer with the signature. -->
 
 			<footer>
 				<p>Braga, 12 April 2018.</p>
 				<div class="colors-page">
-	        			<div class="steel-blue"></div>
-	        			<div class="moccasin"></div>
-	        			<div class="dim-gray"></div>
+					<span class="indigo"></span>
+					<span class="deep-pink"></span>
+					<span class="lavender"></span>
+					<span class="dim-gray"></span>
 				</div>	
 			</footer>			
 		</div>
