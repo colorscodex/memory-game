@@ -177,8 +177,12 @@ h1 {
 	font:300 33px 'Open Sans', sans-serif;
 }
 		
-/*	Styles for the deck of cards.
-	============================= */
+*
+	Styles for the deck of cards.
+	The linear-gradient() function starts indigo (#4b0082), 
+	transitioning to lavender (#e6e6fa).
+	It starts at top left and goes to bottom right.
+	====================================================== */
 
 .deck {
 	width: 525px;
@@ -264,7 +268,6 @@ footer p {
 }
 
 .indigo,
-.lavender,
 .deep-pink,
 .dim-gray {
 	width: 26px;
@@ -276,10 +279,6 @@ footer p {
 
 .indigo {
 	background-color: #4b0082;
-}
-
-.lavender {
-	background-color: #e6e6fa;
 }
 
 .deep-pink {
@@ -368,7 +367,6 @@ footer p {
 
 	.indigo,
 	.deep-pink,
-	.lavender,
 	.dim-gray {
 		width: 20px;
 		height: 20px;    
