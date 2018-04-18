@@ -1,5 +1,3 @@
-
-		
 $(document).ready(function(){
 
     $("#navbar").click(function(){
@@ -8,7 +6,7 @@ $(document).ready(function(){
     });
 });
 
-/* Created an array with my phrases and for adding to the cards
+/* Created an array with my phrases and for adding to the cards.
 =============================================================== */
 
 var myString = [
@@ -30,7 +28,7 @@ var myString = [
     "do it!"
     ];
 
-/* Use the Shuffle function for shuffling the cards and change their position each time the page is loaded */
+/* Use the Shuffle function for shuffling the cards and change their position each time the page is loaded. */
 
 shuffle(myString);
 
@@ -71,29 +69,25 @@ function shuffle(array) {
 }
 
 
-/*  Rotate the cards with jQuery: 
-	.toggleClass(className)  for adding or removing one class from each element.
+/*	Rotate the cards with jQuery:
+	.addClass(className) / .removeClass(className) methods for adding or removing one class from each element.
 	============================================================================ */
 
 $(document).ready(function(){
 
 	$( ".card" ).click(function(e) {
-
-				e.preventDefault();
-
-				$( this ).toggleClass( "rotate-card");
+		e.preventDefault();
+		$( this ).addClass( "rotate-card");
 	});
 });
 
-
-// EasyTimer.js from https://albert-gonzalez.github.io/easytimer.js/
-
-var timer = new Timer();
-timer.start();
-timer.addEventListener('secondsUpdated', function (e) {
-    $('#basicUsage').html(timer.getTimeValues().toString());
+$(document).ready(function(){
+	
+	$( "#turn-back" ).click(function(e) {
+		e.preventDefault();
+		$(".card" ).removeClass( "rotate-card");
+	});
 });
-
 
 
 
