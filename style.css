@@ -324,7 +324,7 @@ footer p {
 	.deck {
 		width: 360px;
 		min-height: 350px;
-		padding: 10px;
+		padding: 10px 10px 10px 15px;
 		margin-bottom: 27px;
 	}
 
