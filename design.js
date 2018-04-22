@@ -71,7 +71,7 @@ function shuffle(array) {
 
 /*	Rotate the cards with jQuery:
 	.addClass(className) / .removeClass(className) methods for adding or removing one class from each element.
-	============================================================================ */
+	========================================================================================================== */
 
 $(document).ready(function(){
 
@@ -89,7 +89,13 @@ $(document).ready(function(){
 	});
 });
 
+// The reload() method to reload the current document.
 
+$(document).ready(function(){
+	$( "#restart" ).click(function(e) {
+		location.reload();
+	});
+});
 
 
 
