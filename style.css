@@ -180,12 +180,19 @@ h1 {
 /*	Style for the buttons
 	===================== */
 
+#turn-back {
+	padding: 17px 6px;
+}
+
+#restart {
+	padding: 16px  5.1px;
+}
+
 #turn-back,
 #restart {
 	background-color: #696969;
 	border: none;
 	color: #fffff0;
-	padding: 17px 6px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
