@@ -301,6 +301,10 @@ footer p {
 
 .colors-page {
 	padding: 18px 0;
+	justify-content: flex-end;
+	align-items: flex-end;
+	-webkit-justify-content: flex-end;
+	-webkit-align-items: flex-end;
 }
 
 .navy,
@@ -390,11 +394,6 @@ footer p {
 
 	h1 {
 		font-size: 28px;
-	}
-
-	footer  {
-		justify-content: space-between;
-		-webkit-justify-content: space-between;
 	}
 
 	.colors-page {
