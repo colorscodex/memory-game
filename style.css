@@ -205,7 +205,7 @@ h1 {
 #turn-back:hover,
 #turn-back:focus,
 #restart:hover,
-restart:focus {
+#restart:focus {
 	background-color: #ff7f50;
 	text-decoration: none;
 	box-shadow: 0px 2px 5px #c0c0c0;
