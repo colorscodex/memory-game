@@ -178,7 +178,15 @@ h1 {
 }
 
 /*	Style for the buttons
-	===================== */
+	===================== *//*
+	-webkit-appearance: button;
+	Correct the inability to style clickable types in iOS and Safari.*/
+/*	With ::-moz-focus-inner remove the inner border in Firefox. */
+
+#turn-back::-moz-focus-inner,
+#restart::-moz-focus-inner {
+	border-style: none;
+}	
 
 #turn-back {
 	padding: 15px 3px;
@@ -203,6 +211,8 @@ h1 {
 	box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.2);
+	-webkit-appearance: button;
+	-webkit-border-radius: 50%;
 }
 
 /*	:focus selector to select the element that has focus.
