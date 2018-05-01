@@ -1,3 +1,6 @@
+//  To open the panel named Methods used with some information.
+//  To prevent any jQuery code from running before the document is finished loading (is ready).
+
 $(document).ready(function(){
 
     $("#navbar").click(function(){
@@ -6,10 +9,10 @@ $(document).ready(function(){
     });
 });
 
-/* Created an array with my phrases and for adding to the cards.
-=============================================================== */
+/*  Created an array with my quotes and for adding to the cards.
+    ============================================================ */
 
-var myString = [
+var myQuotes = [
     "Hello",
     "world!",
     "The memory",
@@ -28,29 +31,30 @@ var myString = [
     "do it!"
     ];
 
-/* Use the Shuffle function for shuffling the cards and change their position each time the page is loaded. */
+/*  First, use the Shuffle function for shuffling the cards and change their position each time the page is loaded. 
+    =============================================================================================================== */
 
-shuffle(myString);
+shuffle(myQuotes);
 
-/* Then, add one phrase for each p element. */
+/*  Second, add one phrase for each p element. 
+    ========================================== */
 
-document.getElementById("one").innerHTML= myString[0];
-document.getElementById("two").innerHTML= myString[1];
-document.getElementById("three").innerHTML= myString[2];
-document.getElementById("four").innerHTML= myString[3];
-document.getElementById("five").innerHTML= myString[4];
-document.getElementById("six").innerHTML= myString[5];
-document.getElementById("seven").innerHTML= myString[6];
-document.getElementById("eight").innerHTML= myString[7];
-document.getElementById("nine").innerHTML= myString[8];
-document.getElementById("ten").innerHTML= myString[9];
-document.getElementById("eleven").innerHTML= myString[10];
-document.getElementById("twelve").innerHTML= myString[11];
-document.getElementById("thirteen").innerHTML= myString[12];
-document.getElementById("fourteen").innerHTML= myString[13];
-document.getElementById("fifteen").innerHTML= myString[14];
-document.getElementById("sixteen").innerHTML= myString[15];
-
+document.getElementById("one").innerHTML= myQuotes[0];
+document.getElementById("two").innerHTML= myQuotes[1];
+document.getElementById("three").innerHTML= myQuotes[2];
+document.getElementById("four").innerHTML= myQuotes[3];
+document.getElementById("five").innerHTML= myQuotes[4];
+document.getElementById("six").innerHTML= myQuotes[5];
+document.getElementById("seven").innerHTML= myQuotes[6];
+document.getElementById("eight").innerHTML= myQuotes[7];
+document.getElementById("nine").innerHTML= myQuotes[8];
+document.getElementById("ten").innerHTML= myQuotes[9];
+document.getElementById("eleven").innerHTML= myQuotes[10];
+document.getElementById("twelve").innerHTML= myQuotes[11];
+document.getElementById("thirteen").innerHTML= myQuotes[12];
+document.getElementById("fourteen").innerHTML= myQuotes[13];
+document.getElementById("fifteen").innerHTML= myQuotes[14];
+document.getElementById("sixteen").innerHTML= myQuotes[15];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
         
@@ -68,34 +72,58 @@ function shuffle(array) {
     return array;
 }
 
+/*  Rotate the cards with jQuery:
+    .addClass(className) / .removeClass(className) methods for adding or removing one class from each element.
+    ========================================================================================================== */
 
-/*	Rotate the cards with jQuery:
-	.addClass(className) / .removeClass(className) methods for adding or removing one class from each element.
-	========================================================================================================== */
+//  To prevent any jQuery code from running before the document is finished loading (is ready).
+//  Select all <div> elements with class="card".
+//  The click() method attaches an event handler function to an HTML element.
+//  The function is executed when the user clicks on the HTML element.
 
 $(document).ready(function(){
-
-	$( ".card" ).click(function(e) {
-		e.preventDefault();
-		$( this ).addClass( "rotate-card");
-	});
+    $( ".card" ).click(function(e) {
+        e.preventDefault();
+        $( this ).addClass( "rotate-card");
+    });
 });
 
 $(document).ready(function(){
-	
-	$( "#turn-back" ).click(function(e) {
-		e.preventDefault();
-		$(".card" ).removeClass( "rotate-card");
-	});
+    $( "#turn-back" ).click(function(e) {
+        e.preventDefault();
+        $(".card" ).removeClass( "rotate-card");
+    });
 });
 
-// The reload() method to reload the current document.
+/*  When clic the button named shuffle, shuffle the cards for a new game.
+    ==================================================================== */
 
 $(document).ready(function(){
-	$( "#restart" ).click(function(e) {
-		location.reload();
-	});
+    
+    $("#restart").on("click",function myShuffle () {
+        
+        // new array shuffleQuotes 
+        let shuffleQuotes = shuffle(myQuotes);
+        
+        document.getElementById("one").innerHTML= shuffleQuotes[0];
+        document.getElementById("two").innerHTML= shuffleQuotes[1];
+        document.getElementById("three").innerHTML= shuffleQuotes[2];
+        document.getElementById("four").innerHTML= shuffleQuotes[3];
+        document.getElementById("five").innerHTML= shuffleQuotes[4];
+        document.getElementById("six").innerHTML= shuffleQuotes[5];
+        document.getElementById("seven").innerHTML= shuffleQuotes[6];
+        document.getElementById("eight").innerHTML= shuffleQuotes[7];
+        document.getElementById("nine").innerHTML= shuffleQuotes[8];
+        document.getElementById("ten").innerHTML= shuffleQuotes[9];
+        document.getElementById("eleven").innerHTML= shuffleQuotes[10];
+        document.getElementById("twelve").innerHTML= shuffleQuotes[11];
+        document.getElementById("thirteen").innerHTML= shuffleQuotes[12];
+        document.getElementById("fourteen").innerHTML= shuffleQuotes[13];
+        document.getElementById("fifteen").innerHTML= shuffleQuotes[14];
+        document.getElementById("sixteen").innerHTML= shuffleQuotes[15];
+    });
 });
+
 
 
 
