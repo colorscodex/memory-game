@@ -11,30 +11,24 @@ $(document).ready(function(){
 /*  Created an array with my quotes and for adding to the cards.
     ============================================================ */
 
-var myQuotes = [
-    "Hello",
-    "world!",
-    "The memory",
-    "game",
-    "It is starting",
-    "to work",
-    "I can",
-    "do it!",
-    "Hello",
-    "world!",
-    "The memory", 
-    "game",
-    "It is starting", 
-    "to work",
-    "I can",
-    "do it!"
-    ];
+    var myQuotes = [
+        "Hello",
+        "world!",
+        "The memory",
+        "game",
+        "It is starting",
+        "to work",
+        "I can",
+        "do it!",
+        ];
+    var myQuotesRepeat = myQuotes.slice();    
 
     /*  
     First, use the Shuffle function for shuffling the cards and change their position each time the page is loaded. 
     =============================================================================================================== */
     
     shuffle(myQuotes);
+    shuffle(myQuotesRepeat);
 
     /*  
     Second, add one phrase for each p element. 
@@ -48,14 +42,14 @@ var myQuotes = [
     document.getElementById("six").innerHTML= myQuotes[5];
     document.getElementById("seven").innerHTML= myQuotes[6];
     document.getElementById("eight").innerHTML= myQuotes[7];
-    document.getElementById("nine").innerHTML= myQuotes[8];
-    document.getElementById("ten").innerHTML= myQuotes[9];
-    document.getElementById("eleven").innerHTML= myQuotes[10];
-    document.getElementById("twelve").innerHTML= myQuotes[11];
-    document.getElementById("thirteen").innerHTML= myQuotes[12];
-    document.getElementById("fourteen").innerHTML= myQuotes[13];
-    document.getElementById("fifteen").innerHTML= myQuotes[14];
-    document.getElementById("sixteen").innerHTML= myQuotes[15];
+    document.getElementById("nine").innerHTML= myQuotesRepeat[0];
+    document.getElementById("ten").innerHTML= myQuotesRepeat[1];
+    document.getElementById("eleven").innerHTML= myQuotesRepeat[2];
+    document.getElementById("twelve").innerHTML= myQuotesRepeat[3];
+    document.getElementById("thirteen").innerHTML= myQuotesRepeat[4];
+    document.getElementById("fourteen").innerHTML= myQuotesRepeat[5];
+    document.getElementById("fifteen").innerHTML= myQuotesRepeat[6];
+    document.getElementById("sixteen").innerHTML= myQuotesRepeat[7];
 
     // Shuffle function from http://stackoverflow.com/a/2450976
         
@@ -82,9 +76,24 @@ var myQuotes = [
     //  The click() method attaches an event handler function to an HTML element.
     //  The function is executed when the user clicks on the HTML element.
     
+    let count = 1;
     $( ".card" ).click(function(e) {
         e.preventDefault();
         $( this ).addClass( "rotate-card");
+        
+        //  For opening only two cards.
+        
+        for(let i=1; i<= 20; i++){
+            
+            if(count %= 2){
+                $(this).siblings().removeClass("rotate-card");
+            }
+        };
+
+        count++;
+        return;
+        
+        
     });
 
     $( "#turn-back" ).click(function(e) {
@@ -99,8 +108,9 @@ var myQuotes = [
    
     $("#restart").on("click",function myShuffle () {
         
-        // new array shuffleQuotes 
+        // new array shuffleQuotes / shuffleQuotesRepeat
         var shuffleQuotes = shuffle(myQuotes);
+        var shuffleQuotesRepeat = shuffle(myQuotesRepeat);
         
         document.getElementById("one").innerHTML= shuffleQuotes[0];
         document.getElementById("two").innerHTML= shuffleQuotes[1];
@@ -110,14 +120,14 @@ var myQuotes = [
         document.getElementById("six").innerHTML= shuffleQuotes[5];
         document.getElementById("seven").innerHTML= shuffleQuotes[6];
         document.getElementById("eight").innerHTML= shuffleQuotes[7];
-        document.getElementById("nine").innerHTML= shuffleQuotes[8];
-        document.getElementById("ten").innerHTML= shuffleQuotes[9];
-        document.getElementById("eleven").innerHTML= shuffleQuotes[10];
-        document.getElementById("twelve").innerHTML= shuffleQuotes[11];
-        document.getElementById("thirteen").innerHTML= shuffleQuotes[12];
-        document.getElementById("fourteen").innerHTML= shuffleQuotes[13];
-        document.getElementById("fifteen").innerHTML= shuffleQuotes[14];
-        document.getElementById("sixteen").innerHTML= shuffleQuotes[15];
+        document.getElementById("nine").innerHTML= shuffleQuotesRepeat[0];
+        document.getElementById("ten").innerHTML= shuffleQuotesRepeat[1];
+        document.getElementById("eleven").innerHTML= shuffleQuotesRepeat[2];
+        document.getElementById("twelve").innerHTML= shuffleQuotesRepeat[3];
+        document.getElementById("thirteen").innerHTML= shuffleQuotesRepeat[4];
+        document.getElementById("fourteen").innerHTML= shuffleQuotesRepeat[5];
+        document.getElementById("fifteen").innerHTML= shuffleQuotesRepeat[6];
+        document.getElementById("sixteen").innerHTML= shuffleQuotesRepeat[7];
     });
 });
 
