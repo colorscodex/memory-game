@@ -16,7 +16,7 @@ $(document).ready(function(){
         "world!",
         "The memory",
         "game",
-        "It is starting",
+        "Start",
         "to work",
         "I can",
         "do it!",
