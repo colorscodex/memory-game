@@ -88,7 +88,7 @@ $(document).ready(function(){
             if(count %= 2){
                 $(this).siblings().removeClass("rotate-card");
             }
-        };
+        }
 
         count++;
         return;
